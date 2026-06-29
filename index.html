@@ -195,3 +195,223 @@ nav button {
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Archer9Corporation - Contact Us</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            width: 40%;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-form {
+            width: 60%;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .contact-form button:hover {
+            background: #e68900;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+
+        nav {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: space-around;
+    color: black;                   
+}
+
+nav button {
+    margin-top: 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+
+nav h1 {
+    font-size: 30px;
+    margin-top: 12px;
+}
+
+nav button {
+    width: 150px;
+    height: 40px;
+    color: black;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+            <h1>Archer9 Construction Corp.</h1>
+
+            <ul>
+                <li><a href="https://archer9construction.com/">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Gallery</a></li>
+            </ul>
+
+            <button>Our Projects</button>
+        </nav>
+
+
+<header>
+    <h1>Archer9 Construction Corp.</h1>
+    <p>Building Strong Homes for the Future</p>
+</header>
+
+<div class="container">
+
+    <div class="contact-box">
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+
+            <p><strong>Phone: (929) +1 516 450 218 2</strong></p>
+            <p><strong>Email:</strong>archer9construction@gmail.com</p>
+            <p><strong>Address:</strong>Flushing, NY, 11358 USA
+</p>
+
+            <p>
+                Contact us for house construction, renovation,
+                and building projects. We will reply as soon as possible.
+            </p>
+        </div>
+
+
+        <div class="contact-form">
+
+            <h2>Send Message</h2>
+
+            <form>
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea rows="5" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Archer9 Construction Corp. | All rights reserved
+</footer>
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init("Wv3JGEtVs4ujS8MQ2");
+
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.send("service_39sjq9p", "template_yz06dbi", {
+        name: document.querySelector("[name='name']").value,
+        email: document.querySelector("[name='email']").value,
+        message: document.querySelector("[name='message']").value
+    }).then(() => {
+        alert("Message sent!");
+        this.reset();
+    }).catch(err => {
+        alert("Failed to send.");
+        console.log(err);
+    });
+});
+</script>
